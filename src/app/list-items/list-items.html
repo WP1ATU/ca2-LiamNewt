@@ -1,0 +1,13 @@
+<h3>You have {{api.items().length}} items.</h3>
+
+@if (api.items().length === null) {
+    <li>No items added</li>
+}
+@for (item of api.items(); track item._id)
+{
+    <h3>{{item.make}}</h3>
+    <p>{{item.model}} {{item.year}}</p>
+    <img src="{{item.image}}" length="200px" width="200px" alt="{{item.make}}">
+    <button type="submit" class="btn btn-primary" (click)="delete(item._id)">Delete</button>
+}
+

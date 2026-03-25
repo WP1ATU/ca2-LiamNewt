@@ -1,0 +1,15 @@
+<h2>Add Item</h2>
+        <form (ngSubmit)="addItem()">
+            <div class="mb-3">
+                <label form="carMake" class="form-label">Make</label>
+                <input type="text" class="form-control" id="carMake" name="carMake" [(ngModel)]="make">
+                <label form="carModel" class="form-label">Model</label>
+                <input type="text" class="form-control" id="carModel" name="carModel" [(ngModel)]="model">
+                <label form="carYear" class="form-label">Year</label>
+                <input type="text" class="form-control" id="carYear" name="carYear" [(ngModel)]="year">
+                <label form="carImg" class="form-label">Image</label>
+                <input type="text" class="form-control" id="carImg" name="carImg" [(ngModel)]="image">
+            </div>
+            <button type="submit" class="btn btn-primary">Add Item</button>
+        </form>
+
