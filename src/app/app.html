@@ -1,8 +1,14 @@
-<div>
-      <h1>{{ title() }}</h1>
-    </div>
+<main class="main">
+  <div>
+   <h1>{{ title() }}</h1>
+  </div>
+</main>
+<nav style="background-color: #1E3A8A;;">
+  <div class="container-fluid">
+    <ul class="navbar-item">
     <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true}">Home</a> |
     <a routerLink="/about" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">About</a>
-
-    
+</ul>
+</div>
+</nav>
 <router-outlet />

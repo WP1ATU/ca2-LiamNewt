@@ -2,6 +2,7 @@ import { Injectable,signal } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { inject } from "@angular/core";
 import { Cars } from "./cars.interface";
+import { environment } from "../environments/environment";
  
 @Injectable({
     providedIn: 'root',
@@ -14,6 +15,7 @@ import { Cars } from "./cars.interface";
 
     private _apiUrl = "http://localhost:5050/cars";
 
+    private _siteURL=environment.apiUrl;
     // return all cars from database
   getItems() {
     const url = this._apiUrl;

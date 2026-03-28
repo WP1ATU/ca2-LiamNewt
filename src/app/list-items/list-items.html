@@ -1,13 +1,28 @@
-<h3>You have {{api.items().length}} items.</h3>
+<h4>You have added {{api.items().length}} car(s).</h4>
 
 @if (api.items().length === null) {
     <li>No items added</li>
 }
+<h1>Car List</h1>
+<div class="container mt-4">
 @for (item of api.items(); track item._id)
 {
-    <h3>{{item.make}}</h3>
-    <p>{{item.model}} {{item.year}}</p>
-    <img src="{{item.image}}" length="200px" width="200px" alt="{{item.make}}">
+    <div class="card mb-3 mx-auto car-details-card">
+    <div class="row g-0 align-items-center">
+    <div class="col-md-4 text-center d-flex align-items-center">
+    <img src="{{item.image}}" alt="{{item.make}}" class="img-fluid" style="max-height: 500px; object-fit: cover;">
+    </div>
+    
+    <div class="col-12 col-md-8">
+    <div class="card-body">
+    <h3><strong>Make:</strong> {{item.make}}</h3>
+    <p><strong>Model:</strong> {{item.model}}</p>
+    <p><strong>Year: </strong> {{item.year}}</p>
     <button type="submit" class="btn btn-primary" (click)="delete(item._id)">Delete</button>
+</div>
+</div>
+</div>
+</div>
 }
+</div>
 
