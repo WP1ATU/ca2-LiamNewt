@@ -13,9 +13,9 @@ import { environment } from "../environments/environment";
 
     public items = signal<Cars[]>([]);
 
-    private _apiUrl = "http://localhost:5050/cars";
+    // private _apiUrl = "http://localhost:5050/cars";
 
-    private _siteURL=environment.apiUrl;
+    private _apiUrl=environment.apiUrl;
     // return all cars from database
   getItems() {
     const url = this._apiUrl;
